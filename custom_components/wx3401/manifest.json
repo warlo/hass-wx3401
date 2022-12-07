@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "domain": "wx3401",
+  "name": "WX3401",
+  "config_flow": true,
+  "documentation": "https://github.com/warlo/hass-wx3401",
+  "issue_tracker": "https://github.com/warlo/hass-wx3401/issues",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [],
+  "codeowners": ["@warlo"]
+}

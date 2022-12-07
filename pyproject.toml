@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "wx3401"
+version = "0.1.0"
+description = ""
+authors = ["Hans-Wilhelm Warlo <5417271+warlo@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiohttp = "^3.8.3"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^0.991"
+black = "^22.10.0"
+ruff = "^0.0.135"
+homeassistant = "^2022.12.1"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
