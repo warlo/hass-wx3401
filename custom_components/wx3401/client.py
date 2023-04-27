@@ -8,8 +8,7 @@ from typing import TypedDict, cast
 
 import aiohttp
 from cryptography.hazmat.primitives import padding, serialization
-from cryptography.hazmat.primitives.asymmetric import \
-    padding as asymmetric_padding
+from cryptography.hazmat.primitives.asymmetric import padding as asymmetric_padding
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 
@@ -91,7 +90,6 @@ class WX3401Client:
         }
 
     def decrypt(self, text: str, iv: str) -> str:
-
         if not self.aes_key:
             raise WX3401ClientError("Missing AES Key")
 
