@@ -77,6 +77,11 @@ class WX3401DeviceTracker(CoordinatorEntity, ScannerEntity):  # type: ignore
         return self.coordinator.last_update_success
 
     @property
+    def entity_registry_enabled_default(self) -> bool:
+        """Return if the entity should be enabled when first added to the entity registry."""
+        return True
+
+    @property
     def source_type(self) -> Any:
         """Return the source type."""
         return SOURCE_TYPE_ROUTER
