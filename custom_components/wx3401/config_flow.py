@@ -44,7 +44,7 @@ async def validate_input(
 
 
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):  # type: ignore
-    """Handle a config flow for Amplifi."""
+    """Handle a config flow for WX3401."""
 
     VERSION = 1
     CONNECTION_CLASS = config_entries.CONN_CLASS_LOCAL_POLL

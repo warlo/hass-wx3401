@@ -37,7 +37,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     # Create jar for storing session cookies
     jar = aiohttp.CookieJar(unsafe=True)
 
-    # Amplifi uses session cookie so we need a we client with a cookie jar
+    # WX3401 uses session cookie so we need a we client with a cookie jar
     client_sesssion = async_create_clientsession(hass, False, True, cookie_jar=jar)
 
     coordinator = WX3401DataUpdateCoordinator(
@@ -58,7 +58,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         COORDINATOR_LISTENER: None,
     }
 
-    # Setup the platforms for the amplifi integration
+    # Setup the platforms for the wx3401 integration
     for component in PLATFORMS:
         hass.async_create_task(
             hass.config_entries.async_forward_entry_setup(entry, component)

@@ -52,7 +52,7 @@ async def async_setup_entry(
 
 
 class WX3401DeviceTracker(CoordinatorEntity, ScannerEntity):  # type: ignore
-    """Representing a device connected to amplifi."""
+    """Representing a device connected to wx3401."""
 
     #'Address', 'Rate(kbps)', 'RSSI', 'SNR', 'Level'
     def __init__(
@@ -62,7 +62,7 @@ class WX3401DeviceTracker(CoordinatorEntity, ScannerEntity):  # type: ignore
         initial_data: dict[str, str],
         config_entry: ConfigEntry,
     ) -> None:
-        """Initialize amplifi sensor."""
+        """Initialize wx3401 sensor."""
         super().__init__(coordinator)
         self._data = initial_data
         self._mac = mac_address
